@@ -10,10 +10,11 @@ def start_build():
     global start_time
     start_time = time.time()
 
+
 @hooks.register("written")
 def written():
     global total_written
-    total_written += 1
+    total_written = total_written + 1
 
 
 @hooks.register("stats")
